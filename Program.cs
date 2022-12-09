@@ -93,37 +93,23 @@ int ReadInt(string message)  //Функция ввода
 /*  Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
 [1 2 3 4 5] -> 5 8 3   [6 7 3 6] -> 36 21 */
 
-/* Console.Write("Введите размерность массива:  ");
-int size = int.Parse(Console.ReadLine()!);
+/*Console.WriteLine("Введите размер массива: ");
+int m = int.Parse(Console.ReadLine()!);
+int[] array = new int[m];
 
-int[] array = GetArray(size);
-Console.WriteLine($"Массив - [{String.Join(", ", array)}]");
-Console.WriteLine($"Массив - [{String.Join(", ", PairInArray(array))}]");
-//--------------------методы------------------------
-int[] PairInArray(int[] array)
+for (int i = 0; i < array.Length; i++)
 {
-    int l =array.Length, size = l/2;
-    int[]array2;
-    if (l % 2 == 0)
-        array2 = new int[size];
-        else
-        {
-            array2 = new int[(size +1)];
-            array2[size] = array[size];            
-        }
-        for (int i = 0; i< size; i++, l--)
-             array2[i] = array[l-1];
-        return array2;     
+    array[i] = new Random().Next(0, 20);
+    Console.Write(array[i] + " ");
 }
-//-----------------методы------------------------
+Console.WriteLine();
 
-int[] GetArray(int seze, int minVal = 0, int maxVal = 10)
+int q = array.Length - 1;
+for (int i = 0; i < (array.Length + 1) / 2; i++)
 {
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
-         array[i] = new Random().Next(minVal, maxVal);
-    return array;     
-} */
+    Console.Write(array[i] * array[q] + " ");
+    q--;
+}*/
 
 
 
